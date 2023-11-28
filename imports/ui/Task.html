@@ -1,15 +1,14 @@
 <template name="task">
-    <table>
-        <tr> 
-            <td>
-                <input type="checkbox" checked="{{isChecked}}" class="toggle-checked" />
-            </td> 
-            <td>
-                <span>  {{text}} </span>
-            </td>
-            <td>
-                <button class="delete">&times;</button> 
-            </td>
-        </tr>
-    </table> 
+    <!-- the App.html has the table tags  -->
+    <tr class="tasks">         
+        <td>
+            <input type="checkbox" checked="{{isChecked}}" class="toggle-checked" />
+        </td> 
+        <td>
+           {{text}}
+        </td>
+        <td>
+            <button class="delete">&times;</button> 
+        </td>
+    </tr>
 </template>

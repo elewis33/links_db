@@ -4,6 +4,7 @@ import { TasksCollection } from '../imports/api/TasksCollection';
 const insertTask = taskText => TasksCollection.insert({text: taskText});
 
 Meteor.startup(() => {
+  //only add tasks if there are no records found
   if (TasksCollection.find().count() === 0) {
     [
       'First Task',
