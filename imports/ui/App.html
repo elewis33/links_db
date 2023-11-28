@@ -7,7 +7,7 @@
         <header>
             <div class="app-bar">
                 <div class="app-header">
-                    <h1>Link Saver</h1>
+                    <h1>Task Master {{ incompleteCount }} </h1>
                 </div>
             </div>
 
@@ -18,8 +18,26 @@
         <!-- // add the input field and button from the template -->
         {{> form}}
 
+        <div class="filter">
+            <button id="hide-completed-button">
+                {{#if hideCompleted}}
+                    Show All
+                {{else}}
+                    Hide Completed 
+                {{/if}}
+            </button>
+        </div>
         <!-- // iterate through the tasks and apply the task template -->
         <table class="tasks">
+            <th align="left"> 
+                Completed
+            </th>
+            <th align="left">
+                Task
+            </th>
+            <th align="left">
+                Delete
+            </th>
             {{#each tasks}}
                 {{> task}}
             {{/each}}
