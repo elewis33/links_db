@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
-import { TasksCollection } from '../db/TasksCollection.js';
+import { TasksCollection } from '/imports/db/TasksCollection.js';
 import { ReactiveDict } from 'meteor/reactive-dict';
 import './App.html';
 import './Task.js';
