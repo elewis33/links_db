@@ -32,7 +32,6 @@ Template.mainContainer.onCreated(function mainContainerOnCreated() {
   Tracker.autorun(() => {
     this.state.set(IS_LOADING_STRING, !handler.ready());
   });
-
 });
 
 Template.mainContainer.events({
