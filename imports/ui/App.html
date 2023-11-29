@@ -29,6 +29,15 @@
                 {{/if}}
             </button>
         </div>
+
+        {{#if isLoading}}
+            <div class="loading">loading...</div>
+        {{/if}}
+        
+        <div class="padded-top-bottom">
+            <hr width="80%" align="center"/>
+        </div>
+        
         <!-- // iterate through the tasks and apply the task template -->
         <table class="tasks">
             <th align="center"> 
