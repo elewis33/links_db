@@ -13,8 +13,10 @@
 
         </header>
         <div class="main"> 
-
-       
+            {{#if isUserLogged}}
+                <div class="user">
+                    {{getUser.username}}
+                </div>
         <!-- // add the input field and button from the template -->
         {{> form}}
 
@@ -29,19 +31,22 @@
         </div>
         <!-- // iterate through the tasks and apply the task template -->
         <table class="tasks">
-            <th align="left"> 
+            <th align="center"> 
                 Completed
             </th>
             <th align="left">
                 Task
             </th>
-            <th align="left">
+            <th align="center">
                 Delete
             </th>
             {{#each tasks}}
                 {{> task}}
             {{/each}}
         </table>
+        {{else}}
+            {{> login}}
+        {{/if}}
         </div>
     </div>
 </template>
